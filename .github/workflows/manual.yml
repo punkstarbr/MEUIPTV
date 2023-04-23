@@ -1,0 +1,74 @@
+name: Baixando Lista
+# Baixando Lista
+
+# Descrição: Este script automatiza o processo de atualização da lista baixada.
+# O script é disparado por meio de uma agendamento (cron) ou pela ação de pull request.
+
+on:
+  schedule:
+    # Agendamento para executar a tarefa a cada 30 minutos
+    - cron: '*/30 * * * *'
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repositório
+      uses: actions/checkout@v2
+
+    - name: Instalando streamlink
+      run: |
+        pip install --user --upgrade streamlink
+        
+    - name: INSTALANDO SELENIUM
+      run: |
+        pip install selenium --upgrade
+        pip install requests
+        pip install beautifulsoup4
+        pip install lxml
+        pip install python-dateutil
+
+
+           
+    - name: Install ffmpeg
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y ffmpeg      
+        
+    - name: Install bs4
+      run: |
+        pip install beautifulsoup4
+
+      
+    - name: Install ffmpeg
+      run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      
+    - name: Executar script Python
+      run: |
+        python agrupadordelistas.py
+        if [ $? -ne 0 ]; then
+          echo "Erro na execução do script Python."
+          exit 1
+        fi
+    - name: Adicionar arquivos ao controle de versão
+      run: |
+        git add -A
+        ls -la
+        
+
+        
+
+         
+         
+         
+    - name: Commit & Push
+      run: |
+        git config --global user.email "action@github.com"
+        git config --global user.name "GitHub Action"
+        git commit -m "Atualizar lista baixada"
+        git push origin main
