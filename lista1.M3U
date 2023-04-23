@@ -1,7 +1,5 @@
 #EXTM3U url-tvg="http://lichphatsong.xyz/schedule/vagroup_epg.xml,https://raw.githubusercontent.com/AqFad2811/epg/main/epg.xml,https://iptv-org.github.io/epg/guides/pl/programtv.onet.pl.epg.xml.gz,https://iptv-org.github.io/epg/guides/bg/tv.dir.bg.epg.xml.gz,https://iptv-org.github.io/epg/guides/uk.xml,https://iptv-org.github.io/epg/guides/ca.xml,https://iptv-org.github.io/epg/guides/fr.xml,https://iptv-org.github.io/epg/guides/us.xml,https://trada.info/epg.xml,https://iptv-org.github.io/epg/guides/de.xml" tvg-shift=0 m3uautoload=1
 
-#EXTINF:-1 tvg-logo="https://img.new.livestream.com/accounts/0000000001db24af/9035c281-8aa5-4471-9607-1b051699ae2a_170x170.jpg" catchup="append" catchup-days="2" catchup-source="https://tshift.fptplay.net/dvr/vtv2_2000.stream/chunks_dvr_range-${start}-${offset}.m3u8",TPA
-https://player-api.new.livestream.com/accounts/31138991/events/10556832/broadcasts/235934142.secure.m3u8
 
 # VTV
 #EXTINF:0 tvg-id="vtv1hd" group-title="💕| VTV" tvg-logo="http://logo.vagroup.pw/1.png" catchup="append" catchup-days="2" catchup-source="https://tshift.fptplay.net/dvr/vtv1hd_1500.stream/chunks_dvr_range-${start}-${offset}.m3u8",❤️| VTV1 HD        
@@ -4581,6 +4579,9 @@ https://mdstrm.com/live-stream-playlist/58dc3d471cbe05ff3c8e463e.m3u8
 https://live.playstop.me/1816184091/index.m3u8
 #EXTINF:-1  tvg-id="N/A" group-title="NEWS WORLD" tvg-logo="N/A",FOX NEWS USA
 https://fox-foxnewsnow-samsungus.amagi.tv/playlist720p.m3u8
+
+#EXTINF:-1 vg-chno="107" tvg-logo="https://img.new.livestream.com/accounts/0000000001db24af/9035c281-8aa5-4471-9607-1b051699ae2a_170x170.jpg" catchup="append" catchup-days="2" catchup-source="https://tshift.fptplay.net/dvr/vtv2_2000.stream/chunks_dvr_range-${start}-${offset}.m3u8",TPA
+https://player-api.new.livestream.com/accounts/31138991/events/10556832/broadcasts/235934142.secure.m3u8
 #EXTINF:-1 tvg-chno="108" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Azteca_Uno_logo.webp/245px-Azteca_Uno_logo.webp.png",Azteca 1
 http://tvstarlife.com:25461/live/geovany/geovany/27241.m3u8
 #EXTINF:-1 tvg-chno="110" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/4/4f/Las_Estrellas_logo_%282016%29.png",Las Estrellas
